@@ -1,0 +1,11 @@
+services:
+  - type: docker
+    name: budibase-proxy
+    env: docker
+    plan: free
+    dockerCommand: docker-compose up
+    repo: https://github.com/Tamachamo/Budebase_render
+    branch: main
+    buildFilter:
+      paths:
+        - docker-compose.yml
